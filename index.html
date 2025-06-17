@@ -4,24 +4,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORM(NON-RESP)</title>
+    <title>FORM(NON-RESPONSIVE)</title>
     <link rel="shortcut icon" href="/images/favicon1.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/style.css">
-    
+    <style>
+        *{
+            letter-spacing: 3px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+            height:100vh;
+            display: flex;
+        }
+
+        .left {
+            display: block;
+            width: 30%;
+            background:url(images/bg-main-desktop.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(10px);
+        }
+        .right {
+            width: 70%;
+            
+            padding: 20px;
+        }
+
+        .leftimg1{
+            position: relative;
+            left: 41%;
+            top: 18%;
+            
+            box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+        .top-left {
+            position: relative;
+            top: -7%;
+            left: 47%;
+            color: white;
+          }
+          .top-left1 {
+            position: absolute;
+            top: 30%;
+            left: 11%;
+            color: white;
+          }
+          .imgtext {
+            position: relative;
+            top: 0%;
+            left: 47%;
+            color: white;
+            font-size:30px ;
+            letter-spacing: 3px;
+            
+          }
+          .imgtext1 {
+            position: relative;
+            top: 2%;
+            left: 47%;
+            color: white;
+            font-size:18px ;
+            letter-spacing: 3px;
+            font-weight: 500;
+            
+          }
+          .imgtext2 {
+            position: relative;
+            top: 0%;
+            left: 105%;
+            color: white;
+            font-size:12px ;
+            letter-spacing: 3px;
+            
+          }
+          .imgtext3 {
+            position: relative;
+            top: -9.3%;
+            left: 132%;
+            color: white;
+            font-size:15px ;
+            letter-spacing: 3px;
+            
+          }
+        .leftimg2{
+            position: relative;
+            left: 70%;
+            top: 6%;
+            box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color:transparent;
+            position: relative;
+            top: 27%;
+            left: 30%;
+            
+        }
+
+        .payment-form label {
+            font-size: 14px;
+            color:hsl(278, 68%, 11%);
+            display: block;
+            margin-bottom: 8px;
+            
+        }
+
+        .payment-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #d9d9d9;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .payment-form input::placeholder {
+            color: #c4c4c4;
+        }
+
+        .error-message {
+            color: hsl(0, 100%, 66%);
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+            
+        }
+        .input-error {
+            border-color: hsl(0, 100%, 66%);
+        }
+        .exp-cvc {
+            display: flex;
+            gap: 10px;
+        }
+
+        .exp-date {
+            flex: 2;
+        }
+
+        .exp-date .exp-inputs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .exp-date .exp-inputs input {
+            width: 48%;
+        }
+        input:focus {
+            border-color: hsl(270, 3%, 87%);
+            color:  hsl(278, 68%, 11%);
+            font-family: 'Space Grotesk', sans-serif;
+          }
+        .cvc {
+            flex:1;
+        }
+
+        .payment-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #2d132c;
+            border: 2px solid hsl(278, 68%, 11%);
+            border-radius: 5px;
+            color: hsl(270, 3%, 87%);
+            border-radius: 5px;
+            font-size: 19px;
+            cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: background-color 0.5s ease-out;
+        }
+
+        .payment-form button:hover {
+            background:transparent;
+            color: black ;
+        }
+        #thank-you {
+            display: none;
+        }
+        #thank-you p{
+            position: absolute;
+            left:55%;
+            top: 50%;
+        }
+        #thank-you h2{
+            position: absolute;
+            left:59%;
+            top: 45%;
+        }
+        #thank-you button{
+            width: 30%;
+            padding: 15px;
+            background-color: #2d132c;
+            border: 1px solid hsl(278, 68%, 11%);
+            border-radius: 2px;
+            color: hsl(270, 3%, 87%);
+            border-radius: 5px;
+            font-size: 19px;
+            cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
+            position: absolute;
+            left:49%;
+            top: 57%;
+            transition:background-color 0.5s ease-out ;
+        }
+        #thank-you button:hover{
+            background:none;
+            color: black;
+        }
+        #thank-you img{
+            position: absolute;
+            left:61%;
+            top: 36%;
+        }
+    </style>
 </head>
 
 <body>
     <div class="left">
         <img class="leftimg1" src="/images/bg-card-front.png" alt="">
         <div class="top-left"><i class="fa-solid fa-circle fa-3x"></i><div class="top-left1"><i class="fa-regular fa-circle"></i></div></div>
-         <div class="imgtext">9591 6489 6389 101E</div>
-         <div class="imgtext1">FELICIA LEIRE</div>
-         <div class="imgtext2">09/00</div>
+        <div class="imgtext" id="card-display-number">9591 6489 6389 101E</div>
+        <div class="imgtext1" id="card-display-name">FELICIA LEIRE</div>
+        <div class="imgtext2" id="card-display-expiry">09/00</div>
 
         <img class="leftimg2" src="/images/bg-card-back.png" alt="">
-        <div class="imgtext3">000</div>
+        <div class="imgtext3" id="card-display-cvc">000</div>
     </div>
     <div class="right">
         <div class="container">
@@ -53,7 +267,7 @@
                 </div>
         
                 <button type="submit">Confirm</button>
-            
+            </form>
         </div>
         <div id="thank-you" style="display: none;">
             <img  src="/images/icon-complete.svg" alt="" srcset="">
@@ -63,7 +277,145 @@
         </div>
     </div>
 
-    <script src="/index.js"></script>
+    <script>
+        // Dynamic card update functionality
+        function formatCardNumber(value) {
+            const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            const matches = v.match(/\d{4,16}/g);
+            const match = matches && matches[0] || '';
+            const parts = [];
+            for (let i = 0, len = match.length; i < len; i += 4) {
+                parts.push(match.substring(i, i + 4));
+            }
+            if (parts.length) {
+                return parts.join(' ');
+            } else {
+                return v;
+            }
+        }
+
+        function updateCardDisplay() {
+            const cardNumber = document.getElementById('card-number').value;
+            const cardName = document.getElementById('cardholder-name').value;
+            const expMonth = document.getElementById('exp-month').value;
+            const expYear = document.getElementById('exp-year').value;
+            const cvc = document.getElementById('cvc').value;
+
+            // Update card number display
+            const displayNumber = cardNumber || '9591 6489 6389 101E';
+            document.getElementById('card-display-number').textContent = formatCardNumber(displayNumber) || '9591 6489 6389 101E';
+
+            // Update cardholder name display
+            document.getElementById('card-display-name').textContent = cardName.toUpperCase() || 'FELICIA LEIRE';
+
+            // Update expiry display
+            const month = expMonth.padStart(2, '0');
+            const year = expYear.padStart(2, '0');
+            const expiry = (expMonth || expYear) ? `${month}/${year}` : '09/00';
+            document.getElementById('card-display-expiry').textContent = expiry;
+
+            // Update CVC display
+            document.getElementById('card-display-cvc').textContent = cvc || '000';
+        }
+
+        // Add event listeners for real-time updates
+        document.getElementById('card-number').addEventListener('input', function(e) {
+            e.target.value = formatCardNumber(e.target.value);
+            updateCardDisplay();
+        });
+
+        document.getElementById('cardholder-name').addEventListener('input', updateCardDisplay);
+        
+        document.getElementById('exp-month').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '').substring(0, 2);
+            updateCardDisplay();
+        });
+        
+        document.getElementById('exp-year').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '').substring(0, 2);
+            updateCardDisplay();
+        });
+        
+        document.getElementById('cvc').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '').substring(0, 3);
+            updateCardDisplay();
+        });
+
+        // Original form validation
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Clear previous error messages
+            clearErrors();
+
+            // Get form values
+            const cardholderName = document.getElementById('cardholder-name').value.trim();
+            const cardNumber = document.getElementById('card-number').value.trim();
+            const expMonth = document.getElementById('exp-month').value.trim();
+            const expYear = document.getElementById('exp-year').value.trim();
+            const cvc = document.getElementById('cvc').value.trim();
+
+            // Validation flags
+            let isValid = true;
+
+            // Validate cardholder name
+            if (cardholderName === '') {
+                showError('name-error', "Can't be blank");
+                isValid = false;
+            }
+
+            // Validate card number
+            const cardNumberPattern = /^[0-9\s]+$/;
+            if (cardNumber === '') {
+                showError('number-error', "Can't be blank");
+                isValid = false;
+            } else if (!cardNumberPattern.test(cardNumber)) {
+                showError('number-error', "Wrong format, numbers only");
+                isValid = false;
+            }
+
+            // Validate expiration date
+            const expPattern = /^[0-9]{2}$/;
+            if (expMonth === '' || expYear === '') {
+                showError('exp-error', "Can't be blank");
+                isValid = false;
+            } else if (!expPattern.test(expMonth) || !expPattern.test(expYear)) {
+                showError('exp-error', "Wrong format, numbers only");
+                isValid = false;
+            }
+
+            // Validate CVC
+            const cvcPattern = /^[0-9]{3}$/;
+            if (cvc === '') {
+                showError('cvc-error', "Can't be blank");
+                isValid = false;
+            } else if (!cvcPattern.test(cvc)) {
+                showError('cvc-error', "Wrong format, numbers only");
+                isValid = false;
+            }
+
+            // If all fields are valid, show the thank you message
+            if (isValid) {
+                document.getElementById('payment-form').style.display = 'none';
+                document.getElementById('thank-you').style.display = 'block';
+            }
+        });
+
+        function showError(elementId, message) {
+            document.getElementById(elementId).textContent = message;
+        }
+
+        function clearErrors() {
+            const errorElements = document.querySelectorAll('.error-message');
+            errorElements.forEach(element => {
+                element.textContent = '';
+            });
+        }
+
+        function loadNewPage() {
+            window.location.href = '/index.html'; 
+        }
+    </script>
 </body>
 
 </html>
